@@ -1,0 +1,11 @@
+body {
+    background-color:lightgreen;
+}
+h1 {    
+    font-size:10vh;
+    text-align:center;
+    background-color:beige;
+    border:10px solid black;
+    margin-left:10vh;
+    margin-right:10vh;
+}
