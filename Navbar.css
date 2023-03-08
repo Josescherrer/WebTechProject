@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    background-color:beige;
+    margin-bottom:100px;
+}
+.navbar:hover, .footeritem:hover {
+    background-color:#AC9362;
+    font-weight: 700;
+}
+.navbar {
+    list-style-type:none;
+    color:black;
+    text-decoration:none;
+    font-size:3vh;
+    text-align:center;
+    padding-left:150px;
+    padding-right:150px;
+}
