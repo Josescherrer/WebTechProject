@@ -4,15 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feedback</title>
+
+    <link rel="stylesheet" href="Navbar.css">
+    <style>
+        form {
+            background-color:beige;
+            border:10px solid black;
+            font-size:1vh;
+            width:40vh;
+            display:block;
+            margin:auto;
+        }
+        .Rating {
+            width:2vh;
+        }
+
+        fieldset label {
+            display:inline-block;
+            width: 5vh;
+        }
+        fieldset {
+            border:4px solid black;
+            text-align:left;
+        }
+        button {
+            fill:darkgreen;
+        }
+        h1 {    
+            font-size:5vh;
+            text-align:center;
+            background-color:beige;
+            border:10px solid black;
+            margin-left:10vh;
+            margin-right:10vh;
+        }
+        body {
+            background-color:lightgreen;
+        }
+    </style>
 </head>
 <body>
+    <h1>Feedback Form</h1>
     <ul class="nav">
+        <li class="navbar"><img id="#favicon" src="pictures/Scholars/favicon-16x16.png"></li>
         <li class="navbar"><a class="navbar" href="index.html">Home</a></li>
         <li class="navbar"><a class="navbar" href="scholars.html">Scholars</a></li>
         <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
         <li class="navbar"><a class="navbar" href="projects.html">Projects</a></li>
         <li class="navbar"><a class="navbar" href="newsletter.html">Newsletters</a></li>
     </ul>
+    <form action="https://oim-apis.up.railway.app/form2" method="POST">
+        <fieldset>
+            <div>
+                <label for="Last-name">Last Name:</label>
+                <input type="text" placeholder="Last Name" id="Last-name" name="Last-name">
+                
+            </div>
+            <div>
+                <label for="First-name">First Name:</label>
+                <input type="text" placeholder="First Name" id="First-name" name="First-name">
+            </div>
+            <div>
+                <label for="Email:">Email:</label>
+                <input type="text" placeholder="Email" id="Email" name="Email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                What would you rate the design and layout of the Website? <br>
+                <label>
+                    <input class="Rating" type="radio" name="gender" value="great"/>
+                    Great
+                </label>
+                <label>
+                    <input class="Rating" type="radio" name="gender" value="good"/>
+                    Good
+                </label>
+                <label>
+                    <input class="Rating" type="radio" name="gender" value="bad"/>
+                    Bad
+                </label>
+            </div>
+            <div>
+                <label for="comment">Feedback:</label>
+            </div>
+            <div>
+                <textarea id="comments" name="comments" rows="5" cols="25" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div>
+                <button type="submit">
+                    SUBMIT 
+                <button type="submit">
+                    RESET 
+                </button>
+            </div>
+    </form>
 </body>
 </html>
