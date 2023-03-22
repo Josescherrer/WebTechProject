@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The Weissman Scholars Webpage is used as the public database of the 
     Weissman Scholars from Babson College.">
     <meta name="keywords" content="Weissman, Weissman Scholars, Babson College">
@@ -16,6 +16,57 @@
     <title>Weissman Scholarship</title>
     <style>
         body {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            }
+
+        .navbar, .footerlist {
+            font-size: 1.5rem;
+            }
+
+        .pillars {
+            font-size: 1.2rem;
+            }
+
+        h2 {
+            font-size: 2rem;
+            }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            }
+        .nav {
+            padding: 1rem 2rem;
+            }
+
+        .left, .right {
+            width: 50%;
+            margin: 2rem;
+            }
+
+        #RWeissman, #homeWeissmanPicture {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            }
+
+        iframe {
+            width: 100%;
+            height: 50vh;
+            margin: 2rem auto;
+            }
+        
+        
+        
+        
+        
+        body {
             background-color:beige;
         }
         h1 {
@@ -25,10 +76,23 @@
         }
         .nav {
             display: flex;
-            justify-content:space-between;
-            align-items:center;
-            position:sticky;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             background-color:lightgreen;
+            padding: 0;
+        }
+
+        .navbar {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .nav {
+                justify-content: space-between;
+            }
         }
         .navbar:hover, .footeritem:hover {
             background-color:darkgreen;
