@@ -12,39 +12,48 @@
     <meta property="og:title" content="Weissman Scholars">
     <meta property="og:description" content="The Weissman Scholars Webpage is used as the public database of the 
     Weissman Scholars from Babson College.">
-    <link rel="icon" href="favicon_io (1).zip">
+    <link rel="icon" href="pictures/Scholars/favicon.ico">
     <title>Weissman Scholarship</title>
     <style>
         body {
             width: 80%;
-            max-width: 1200px;
             margin: 0 auto;
+            background-color:beige;
         }
         h1 {
-            font-size: 4rem;
             line-height: 1.2;
+            text-align:center;
+            background-color:green;
             }
 
-        .navbar, .footerlist {
-            font-size: 1.5rem;
-            }
+        .navbar, .footeritem  {
+            font-size: 3vh;
+            list-style-type: none;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+        }
 
         .pillars {
-            font-size: 1.2rem;
+            font-size: 2vh;
+            list-style-type: style;
+            text-align: left;
+            padding-left: 0;
+            margin-left: 10vh;
             }
 
         h2 {
-            font-size: 2rem;
+            font-size: 3vh;
+            text-align: center;
+            background-color: #AC9362;
+            border: 10px solid black;
+            margin: 100px 10vh;
             }
-
         p {
-            font-size: 1.2rem;
+            font-size:2vh;
             line-height: 1.5;
             }
-        .nav {
-            padding: 1rem 2rem;
-            }
-
         .left, .right {
             width: 50%;
             margin: 2rem;
@@ -57,94 +66,37 @@
             }
 
         iframe {
-            width: 100%;
-            height: 50vh;
-            margin: 2rem auto;
-            }
-
-        body {
-            background-color:beige;
-        }
-        h1 {
-            text-align:center;
-            background-color:green;
-            font-size:6vh;
-        }
-        .nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            background-color:lightgreen;
-            padding: 0;
-        }
-
-        .navbar {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-        }
-
-        @media only screen and (min-width: 768px) {
-            .nav {
-                justify-content: space-between;
-            }
-        }
-        .navbar:hover, .footeritem:hover {
-            background-color:darkgreen;
-            font-weight: 700;
-        }
-        .navbar, .footerlist {
-            list-style-type:none;
-            color:black;
-            text-decoration:none;
-            font-size:3vh;
-            text-align:center;
-            padding-left:150px;
-            padding-right:150px;
-        }
-        .pillars {
-            font-size:3vh;
-            list-style-type:style;
-            text-align:left;
-            padding-left:0px;
-            margin-left:10vh;
-        }
-        iframe {
             width:10vh;
             height:10vh;
             border:10px solid black;
             display:block;
             margin:auto;
+            }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:lightgreen;
+            padding: 0;
+            position: relative;
         }
-        h2 {
+
+        .navbar:hover, .footeritem:hover {
+            background-color:darkgreen;
+            font-weight: 700;
+        }
+        .navbar, .footeritem {
+            list-style-type:none;
+            color:black;
+            text-decoration:none;
             font-size:3vh;
             text-align:center;
-            background-color:#AC9362;
-            border:10px solid black;
-            margin-left:10vh;
-            margin-right:10vh;
-        }
-        p {
-            font-size:3vh;
+            flex:1;
         }
         .container {
             display:flex;
         }
-        .left {
-            justify-content:flex-start;
-            width:50%;
-            margin-right:100px;
-            margin-left:100px;
-            margin-top:100px;
-        }
-        .right {
-            justify-content:flex-end;
-            width: 50%;
-            margin-left:100px;
-            margin-right:100px;
-            margin-top:100px;
-        }
+
         #RWeissman, #homeWeissmanPicture {
             display:block;
             border:25px solid black;
@@ -152,10 +104,7 @@
             margin-right:auto;
             margin-left:auto;
         }
-        #homeWeissmanPicture {
-            height:30vh;
-            
-        }
+
         .space {
             height:10vh;
         }
@@ -168,7 +117,6 @@
             align-items:center;
             background-color:lightgreen;
         }
-        
     </style>
 </head>
 <body>

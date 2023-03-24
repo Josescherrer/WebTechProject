@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
     position:sticky;
     background-color:beige;
@@ -9,6 +9,7 @@
 .navbar:hover, .footeritem:hover {
     background-color:#AC9362;
     font-weight: 700;
+
 }
 .navbar {
     list-style-type:none;
@@ -16,6 +17,6 @@
     text-decoration:none;
     font-size:3vh;
     text-align:center;
-    padding-left:150px;
-    padding-right:150px;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
