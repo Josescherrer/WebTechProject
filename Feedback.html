@@ -60,7 +60,7 @@
         <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
         <li class="navbar"><a class="navbar" href="BookRecommendations.html">Book Recommendations</a></li>
     </ul>
-    <form method="POST">
+    <form method="post">
         <fieldset>
             <div>
                 <label for="Last-name">Last Name:</label>
@@ -99,7 +99,7 @@
                 <textarea id="comments" name="comments" rows="5" cols="25" placeholder="Enter your comment here..."></textarea>
             </div>
             <div>
-                <button type="submit">
+                <button id="submit" type="submit">
                     SUBMIT 
                 <button type="submit">
                     RESET 
@@ -107,52 +107,54 @@
             </div>
     </form>
     <script>
-            const form = document.querySelector('form');
-            const firstNameInput = document.getElementById('First-name');
-            const emailInput = document.getElementById('Email');
-            const ratingInputs = document.querySelectorAll('.Rating');
+        const form = document.querySelector('form');
+        const firstName = document.getElementById('First-name');
+        const ratings = document.querySelectorAll('.Rating');
+        const lastName = document.getElementById('Last-name');
+        const comment = document.getElementById("comments");
+        const email = document.getElementById('Email');
 
-        document.querySelector("form").addEventListener('submit', function(arg) {
-        arg.preventDefault(); // prevent form from submitting
+        form.addEventListener('submit', function(arg) {
+            form.preventDefault(); // prevent form from submitting
 
-        // Validate last name input
-        if (document.getElementById('Last-name').value === '') {
-            alert('Please enter your last name');
-            return;
-        }
-
-        // Validate first name input
-        if (firstNameInput.value === '') {
-            alert('Please enter your first name');
-            return;
-        }
-
-        // Validate rating input (Got a hint on from MDN Web Docs to see in which direction I should take to check this.)
-        let ratingSelected = false;
-        for (const ratingInput of ratingInputs) {
-            if (ratingInput.checked) {
-                ratingSelected = true;
-                break;
+            // Validate last name input
+            if (lastName.value === '') {
+                alert('Please enter your last name');
+                return;
             }
-        }
-        if (!ratingSelected) {
-            alert('Please select a rating');
-            return;
-        }
 
-        // if all validations pass, submit the form
-        form.submit();
-        });
+            // Validate first name input
+            if (firstNameInput.value === '') {
+                alert('Please enter your first name');
+                return;
+            }
 
-        $(document).ready(function() {
-            $('form').submit(function() {
-            // code to store form data
+            // Validate rating input (Got a hint on from MDN Web Docs to see in which direction I should take to check this.)
+            let ratingSelected = false;
+            for (const rating1 of ratings) {
+                if (rating1.checked) {
+                    ratingSelected = true;
+                    localStorage.setItem('Rating', rating1.value);
+                    break;
+                }
+            }
+            if (!ratingSelected) {
+                alert('Please select a rating');
+                return;
+            }
+
+            //To set the input into the local Storage
+            localStorage.setItem("First Name", firstName.value);
+            localStorage.setItem("Last Name", lastName.value);
+            localStorage.setItem("Email", email.value);
+            localStorage.setItem('Feedback', comment.value);
+
+            //
+            form.reset();
+
+            // if all validations pass, submit the form
+            alert("Form submitted successfully!");
             });
-        });
-        var formData = $('form').serialize();
-        localStorage.setItem('formData', formData);
-        var storedData = localStorage.getItem('formData');
-
     </script>
 </body>
 </html>
