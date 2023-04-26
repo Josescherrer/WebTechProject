@@ -60,7 +60,7 @@
         <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
         <li class="navbar"><a class="navbar" href="BookRecommendations.html">Book Recommendations</a></li>
     </ul>
-    <form method="post">
+    <form method="dialog">
         <fieldset>
             <div>
                 <label for="Last-name">Last Name:</label>
@@ -101,8 +101,6 @@
             <div>
                 <button id="submit" type="submit">
                     SUBMIT 
-                <button type="submit">
-                    RESET 
                 </button>
             </div>
     </form>
@@ -115,7 +113,6 @@
         const email = document.getElementById('Email');
 
         form.addEventListener('submit', function(arg) {
-            form.preventDefault(); // prevent form from submitting
 
             // Validate last name input
             if (lastName.value === '') {
@@ -124,7 +121,7 @@
             }
 
             // Validate first name input
-            if (firstNameInput.value === '') {
+            if (firstName.value === '') {
                 alert('Please enter your first name');
                 return;
             }
