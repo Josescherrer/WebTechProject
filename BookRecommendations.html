@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bodyHeader.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="icon" href="pictures/Scholars/favicon.ico">
+    <link rel="stylesheet" href="Footer.css">
     <style>
         body {
             width: 80%;
@@ -80,17 +81,17 @@
 
         }
         @keyframes move-right {
-            0% {
+            from {
                 left: 0;
             }
-            100% {
-                left: calc(100% - 200px);
+            to {
+                left: calc(100% - 250px);
             }
         }
 
         @keyframes move-left {
             0% {
-                left: calc(100% - 200px);
+                left: calc(100% - 250px);
             }
             100% {
                 left: 0;
@@ -100,7 +101,6 @@
             animation: move-right 5s ease-in-out infinite alternate;
             
         }
-
         .book:hover {
             animation-play-state: paused;
         }
@@ -108,9 +108,6 @@
         .book.move-left {
             animation: move-left 5s ease-in-out infinite alternate;
 
-        }
-        .book:hover {
-            animation-play-state: paused;
         }
         #heading {
             display:block;
@@ -132,7 +129,7 @@
         <div class="front-cover"><p id="heading">Books Topic will show here</p></div>
     </div>
     <div><h3>INSTRUCTIONS <br><br>Pick the industry that you most like and three books recommended by an Alumni in the respective field will appear below and 
-        the Topic will be shown in the heading of the page. <br><br>
+        the Topic will be shown in the moving book. <br><br>
     </h3></div>
     <div></div>
     <div id="container">
@@ -258,6 +255,23 @@
                 </a>
             </div>
         </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div id="footer">
+        <ul class="footerlist">
+            <li class="footeritem"><a class="footeritem" href="mailto:jscherrerdelllano1@babson.edu">
+            Contact admin of webpage
+            </a></li>
+            <li class="footeritem"><a class="footeritem" href="sitemap.html">
+                Site Map
+            </a></li>
+            <li class="footeritem"><a class="footeritem" href="Feedback.html">
+                Give Feedback 
+            </a></li>
+        </ul>
     </div>
     <script>
         // List of all of the topics to loop through

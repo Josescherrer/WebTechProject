@@ -1,0 +1,28 @@
+.footerlist {
+    margin: 0;
+    padding: 0;
+}
+
+.footerlist , .footeritem {
+    color:black;
+    text-decoration: none;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:beige;
+
+}
+
+.footeritem {
+    font-size: 3vh;
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    flex-grow:1;
+}
+
+.footeritem:hover {
+    background-color:#AC9362;
+    font-weight: 700;
+}

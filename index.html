@@ -26,16 +26,6 @@
             text-align:center;
             background-color:green;
             }
-
-        .navbar, .footeritem  {
-            font-size: 3vh;
-            list-style-type: none;
-            color: black;
-            text-decoration: none;
-            text-align: center;
-            flex: 1;
-        }
-
         .pillars {
             font-size: 2vh;
             list-style-type: style;
@@ -43,7 +33,6 @@
             padding-left: 0;
             margin-left: 10vh;
             }
-
         h2 {
             font-size: 3vh;
             text-align: center;
@@ -51,28 +40,20 @@
             border: 10px solid black;
             margin: 100px 10vh;
             }
-        p {
+        p   {
             font-size:2vh;
             line-height: 1.5;
             }
         .left, .right {
             width: 50%;
             margin: 2rem;
-            }
+        }
 
         #RWeissman, #homeWeissmanPicture {
             max-width: 100%;
             height: auto;
             margin: 2rem auto;
-            }
-
-        iframe {
-            width:10vh;
-            height:10vh;
-            border:10px solid black;
-            display:block;
-            margin:auto;
-            }
+        }
         .nav {
             display: flex;
             justify-content: space-between;
@@ -81,23 +62,9 @@
             padding: 0;
             position: relative;
         }
-
-        .navbar:hover, .footeritem:hover {
-            background-color:darkgreen;
-            font-weight: 700;
-        }
-        .navbar, .footeritem {
-            list-style-type:none;
-            color:black;
-            text-decoration:none;
-            font-size:3vh;
-            text-align:center;
-            flex:1;
-        }
         .container {
             display:flex;
         }
-
         #RWeissman, #homeWeissmanPicture {
             display:block;
             border:25px solid black;
@@ -105,11 +72,9 @@
             margin-right:auto;
             margin-left:auto;
         }
-
         .space {
             height:10vh;
         }
- 
         .footerlist , .footeritem{
             color:black;
             text-decoration: none;
@@ -118,6 +83,36 @@
             align-items:center;
             background-color:lightgreen;
         }
+        .navbar, .footeritem  {
+            font-size: 3vh;
+            list-style-type: none;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+        }
+        .navbar:hover, .footeritem:hover {
+            background-color:darkgreen;
+            font-weight: 700;
+        }
+        .footerlist {
+            padding:0;
+            margin:0;
+        }
+        h3 {
+            text-align:center;
+            background-color: #AC9362;
+            border: 10px solid black;
+            margin: 100px 10vh;
+        }
+        iframe {
+            width:50vh;
+            height:50vh;
+            border:10px solid black;
+            display:block;
+            margin:auto;
+            }
+        
     </style>
 </head>
 <body>
@@ -171,7 +166,11 @@
         </div>
 
     </div>
-    <div class="space">
+
+
+    <div>
+        <h3>Location of Babson College:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.1604312319446!2d-71.26789638434425!3d42.296442079191145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e381418b1914ef%3A0x4ef71f3899e76a89!2sBabson%20College!5e0!3m2!1sen!2sus!4v1677769905711!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
     <div class="space">
@@ -182,10 +181,6 @@
             <li class="footeritem"><a class="footeritem" href="mailto:jscherrerdelllano1@babson.edu">
             Contact admin of webpage
             </a></li>
-            <li class="footeritem">Location of Babson College: <br>
-            <!-- Google Maps Babson below -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.1604312319446!2d-71.26789638434425!3d42.296442079191145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e381418b1914ef%3A0x4ef71f3899e76a89!2sBabson%20College!5e0!3m2!1sen!2sus!4v1677769905711!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </li>
             <li class="footeritem"><a class="footeritem" href="sitemap.html">
                 Site Map
             </a></li>
@@ -194,5 +189,6 @@
             </a></li>
         </ul>
     </div>
+
 </body>
 </html>
