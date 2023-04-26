@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Weissman Scholars Webpage is used as the public database of the 
+    Weissman Scholars from Babson College.">
+    <meta name="keywords" content="Weissman, Weissman Scholars, Babson College">
+    <meta name="author" content="Jose Scherrer">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Weissman Scholars">
+    <meta property="og:description" content="The Weissman Scholars Webpage is used as the public database of the 
+    Weissman Scholars from Babson College.">
+    <title>Newsletters</title>
+    <link rel="stylesheet" href="bodyHeader.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="icon" href="pictures/Scholars/favicon.ico">
+    <style>
+        body {
+            width: 80%;
+            margin: 0 auto;
+            }
+        #container {
+            display: flex;
+            justify-content: center;
+
+            
+        }
+        .box {
+            border:5px solid black;
+            background-color:beige;
+            padding:20px;
+            width:15vh;
+            display:inline-block;
+            text-align:center;
+
+        }
+        .book1:hover, .book2:hover, .book3:hover, a:hover, button:hover {
+            background-color:#AC9362;
+            font-weight:bold;
+        }
+        .book1, .book2, .book3 {
+            display:flex;
+            justify-content:center;
+            color:yellow;
+            margin:5vh;
+            background-color:beige;
+            padding:5vh;
+            border:3px dotted black;
+            font-size:xx-large;
+        }
+        a {
+            color:black;
+            text-decoration:none;
+            text-align:center;
+        }
+        #Finance1, #PM1, #SD1, #CS1, #Psych1, #Entre1 {
+            display: none;
+        }
+        h3 {
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Book Recommendations Page</h1>
+    <ul class="nav">
+        <li class="navbar"><a class="navbar" href="index.html">Home</a></li>
+        <li class="navbar"><a class="navbar" href="scholars.html">Scholars</a></li>
+        <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
+        <li class="navbar"><a class="navbar" href="BookRecommendations.html">Book Recommendations</a></li>
+    </ul>
+    <div><h3>INSTRUCTIONS <br><br>Pick the industry that you most like and three books recommended by an Alumni in the respective field will appear below and 
+        the Topic will be shown in the heading of the page. <br><br>
+    </h3></div>
+    <div></div>
+    <div id="container">
+        <button class="box Finance">
+            Finance
+        </button>
+        <button class="box PM">
+            Product Management
+        </button>
+        <button class="box SD">
+            Self-Development
+        </button>
+        <button class="box CS">
+            Computer Science
+        </button>
+        <button class="box Psych">
+            Psychology
+        </button>
+        <button class="box Entre">
+            Entrepreneurship
+        </button>
+    </div>
+    <div id="books-container">
+        <div id="Finance1">
+            <div class="book1">
+                <a href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661/ref=asc_df_0060555661/?tag=hyprod-20&linkCode=df0&hvadid=312106851030&hvpos=&hvnetw=g&hvrand=5322541741105940788&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1018138&hvtargid=pla-345677936383&psc=1">
+                    The Intelligent Investor
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X/ref=sr_1_1?crid=3QR7YHQXLKFPD&keywords=the+black+swan&qid=1682466351&s=books&sprefix=the+black+swan%2Cstripbooks%2C115&sr=1-1">
+                    The Black Swan
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/Random-Walk-Down-Wall-Street/dp/1324051132/ref=sr_1_1?crid=1DUBF8XBNEE9J&keywords=a+random+walk+down+wall+street&qid=1682466385&s=books&sprefix=A+random+walk+down+%2Cstripbooks%2C91&sr=1-1">
+                    A Random Walk Down Wall Street
+                </a>
+            </div>
+        </div>
+        <div id="PM1">
+            <div class="book1">
+                <a href="https://www.amazon.com/INSPIRED-Create-Tech-Products-Customers/dp/1119387507/ref=sr_1_1?crid=2ZP2UE2UESLJE&keywords=Inspired%3A+How+to+Create+Tech+Products+Customers+Love&qid=1682466405&s=books&sprefix=inspired+how+to+create+tech+products+customers+love%2Cstripbooks%2C97&sr=1-1">
+                    Inspired: How to Create Tech Products Customers Love
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/Cracking-PM-Interview-Product-Technology/dp/0984782818/ref=sr_1_1?crid=3P42686GW3V0U&keywords=cracking+the+pm+interview&qid=1682466422&s=books&sprefix=cracking+the+%2Cstripbooks%2C94&sr=1-1">
+                    Cracking the PM Interview
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/Lean-Product-Playbook-Innovate-Products/dp/1118960874/ref=sr_1_1?crid=2CI8202A8DKWW&keywords=a+lean+product+playbook&qid=1682466444&s=books&sprefix=a+lean+product+playbook%2Cstripbooks%2C93&sr=1-1">
+                    The Lean Product Playbook: How to Innovate with Minimum Viable Products and Rapid Customer Feedback
+                </a>
+            </div>
+        </div>
+        <div id="SD1">
+            <div class="book1">
+                <a href="https://www.amazon.com/s?k=atomic+habits&i=stripbooks&crid=27EX7ZAOCH54U&sprefix=atomic%2Cstripbooks%2C97&ref=nb_sb_ss_ts-doa-p_1_6">
+                    Atomic Habits
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/s?k=the+7+habits+of+highly+effective+people+paperback&i=stripbooks&crid=2VGWJR8ODC4X1&sprefix=the+7+%2Cstripbooks%2C93&ref=nb_sb_ss_ts-doa-p_1_6">
+                    The 7 Habits of Highly Effective People
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/s?k=Mindset%3A+The+New+Psychology+of+Success&i=stripbooks&crid=378JGP6K90A8A&sprefix=mindset+the+new+psychology+of+success%2Cstripbooks%2C85&ref=nb_sb_noss_1">
+                    Mindset: The New Psychology of Success
+                </a>
+            </div>
+        </div>
+        <div id="CS1">
+            <div class="book1">
+                <a href="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=sr_1_1?crid=L559UUO3XO0N&keywords=The+Pragmatic+Programmer%3A+Your+Journey+to+Mastery&qid=1682466510&s=books&sprefix=the+pragmatic+programmer+your+journey+to+mastery%2Cstripbooks%2C90&sr=1-1">
+                    The Pragmatic Programmer: Your Journey to Mastery
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/B000OLSGQ0/ref=sr_1_1?crid=2INRY2LS8XI7M&keywords=Code+Complete%3A+A+Practical+Handbook+of+Software+Construction&qid=1682466525&s=books&sprefix=code+complete+a+practical+handbook+of+software+construction%2Cstripbooks%2C87&sr=1-1&ufe=app_do%3Aamzn1.fos.f5122f16-c3e8-4386-bf32-63e904010ad0">
+                    Code Complete: A Practical Handbook of Software Construction
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/s?k=Design+Patterns%3A+Elements+of+Reusable+Object-Oriented+Software&i=stripbooks&crid=W3JE17QXTK3E&sprefix=design+patterns+elements+of+reusable+object-oriented+software%2Cstripbooks%2C99&ref=nb_sb_noss_1">
+                    Design Patterns: Elements of Reusable Object-Oriented Software
+                </a>
+            </div>
+        </div>
+        <div id="Psych1">
+            <div class="book1">
+                <a href="https://www.amazon.com/s?k=Thinking%2C+Fast+and+Slow&crid=1FDP3I6ECZ9QB&sprefix=thinking%2C+fast+and+slow%2Caps%2C92&ref=nb_sb_noss_1">
+                    Thinking, Fast and Slow
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/s?k=Influence%3A+The+Psychology+of+Persuasion&crid=2YD2SBJ5JZOGI&sprefix=influence+the+psychology+of+persuasion%2Caps%2C124&ref=nb_sb_noss_1">
+                    Influence: The Psychology of Persuasion
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/s?k=The+Power+of+Habit%3A+Why+We+Do+What+We+Do+in+Life+and+Business&crid=2RQ06JE1VW2SG&sprefix=the+power+of+habit+why+we+do+what+we+do+in+life+and+business%2Caps%2C105&ref=nb_sb_noss_1">
+                    The Power of Habit: Why We Do What We Do in Life and Business
+                </a>
+            </div>
+        </div>
+        <div id="Entre1">
+            <div class="book1">
+                <a href="https://www.amazon.com/s?k=The+Lean+Startup%3A+How+Today%27s+Entrepreneurs+Use+Continuous+Innovation+to+Create+Radically+Successful+Businesses&crid=Y4VDCLWD3OG&sprefix=the+lean+startup+how+today%27s+entrepreneurs+use+continuous+innovation+to+create+radically+successful+businesses%2Caps%2C119&ref=nb_sb_noss">
+                    The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+                </a>
+            </div>
+            <div class="book2">
+                <a href="https://www.amazon.com/s?k=Zero+to+One%3A+Notes+on+Startups%2C+or+How+to+Build+the+Future&crid=1110VSGRNAFHN&sprefix=zero+to+one+notes+on+startups%2C+or+how+to+build+the+future%2Caps%2C93&ref=nb_sb_noss_1">
+                    Zero to One: Notes on Startups, or How to Build the Future
+                </a>
+            </div>
+            <div class="book3">
+                <a href="https://www.amazon.com/s?k=The+Hard+Thing+About+Hard+Things%3A+Building+a+Business+When+There+Are+No+Easy+Answers&crid=58ZMS72YBD6I&sprefix=the+hard+thing+about+hard+things+building+a+business+when+there+are+no+easy+answers%2Caps%2C95&ref=nb_sb_noss">
+                    The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // List of all of the topics to loop through
+        let topics = ["Finance", "PM", "CS", "SD", "Psych", "Entre"]
+        let topicsNames = ["Finance", "Product Management", "Computer Science", "Self-Development", "Psychology", "Entrepreneurship"]
+        // Create Function that will change header of page and display the book recommendations for that topic.
+        function changeHeaderAndDisplayBooks(arg1, arg2) {
+            console.log("This is the argument" + arg1)
+            // Make other books display none
+            for (let i=0;i<topics.length;i++){
+                console.log(topics[i]);
+                let x = document.getElementById(`${topics[i]}1`);
+                console.log(x);
+                x.style.display = "none";
+            }
+            //Display the clicked topic Books
+            let bookContainer = document.getElementById(arg1);
+            bookContainer.style.display = "flex";
+            let heading = document.querySelector("h1");
+            heading.innerHTML = arg2;
+
+        }
+        
+        //Call the clicked button
+        for (let i=0;i<topics.length;i++) {
+            let y = document.getElementsByClassName(`box ${topics[i]}`);
+            console.log(y);
+            for (let z =0;z<y.length;z++) {
+                y[z].addEventListener('click', ()=> {
+                    changeHeaderAndDisplayBooks(`${topics[i]}1`, topicsNames[i]);});
+            }}
+
+    </script>
+</body>
+</html>
