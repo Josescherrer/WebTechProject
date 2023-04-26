@@ -61,7 +61,63 @@
         h3 {
             text-align:center;
         }
+        .book {
+            width: 15vh;
+            height: 20vh;
+            position: relative;
+            animation: move-right 3s ease-in-out infinite alternate;
+            border:3px solid black;
+            background-color:white;
+        }
 
+        .front-cover {
+            width: 90%;
+            height: 100%;
+            background-color: #F8C471;
+            position: absolute;
+            z-index: 2;
+            border:2px solid black;
+
+        }
+        @keyframes move-right {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: calc(100% - 200px);
+            }
+        }
+
+        @keyframes move-left {
+            0% {
+                left: calc(100% - 200px);
+            }
+            100% {
+                left: 0;
+            }
+        }
+        .book {
+            animation: move-right 5s ease-in-out infinite alternate;
+            
+        }
+
+        .book:hover {
+            animation-play-state: paused;
+        }
+
+        .book.move-left {
+            animation: move-left 5s ease-in-out infinite alternate;
+
+        }
+        .book:hover {
+            animation-play-state: paused;
+        }
+        #heading {
+            display:block;
+            margin-top:50%;
+            font-weight:bold;
+            text-align:center;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +128,9 @@
         <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
         <li class="navbar"><a class="navbar" href="BookRecommendations.html">Book Recommendations</a></li>
     </ul>
+    <div class="book">
+        <div class="front-cover"><p id="heading">Books Topic will show here</p></div>
+    </div>
     <div><h3>INSTRUCTIONS <br><br>Pick the industry that you most like and three books recommended by an Alumni in the respective field will appear below and 
         the Topic will be shown in the heading of the page. <br><br>
     </h3></div>
@@ -217,7 +276,7 @@
             //Display the clicked topic Books
             let bookContainer = document.getElementById(arg1);
             bookContainer.style.display = "flex";
-            let heading = document.querySelector("h1");
+            let heading = document.getElementById("heading");
             heading.innerHTML = arg2;
 
         }
