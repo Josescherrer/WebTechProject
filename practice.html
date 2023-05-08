@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/aMFqpDWAA1JLEeA41dYSTeE+a9H5g1K9XrysJj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <link rel="icon" href="pictures/Scholars/favicon.ico">
+    <title>Ask a Question</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        h1 {
+            text-align: center;
+            background-color: green;
+            padding: 1rem;
+            margin-bottom: 0;
+        }
+        h2, h3 {
+            background-color: #AC9362;
+            border: 10px solid black;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ask a Question</h1>
+    <nav class="navbar navbar-light bg-lightgreen fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightGreenNavbar" aria-controls="offcanvasLightGreenNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasLightGreenNavbar" aria-labelledby="offcanvasLightGreenNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLightGreenNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sitemap.html">Sitemap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BookRecommendations.html">Book Recommendations</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Weissman Scholars and Alumni
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="scholars.html">Scholars page</a>
+                                </li>
+                                <li><a class="dropdown-item" href="alumni.html">Alumni Page</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1rI-ZbHkaJ1AB0kshLw7ydyFSxJkmoGjcxa3Ti6E_YZc/edit">What can Alumni and Scholars Offer?</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1cBQCBGGZNbZ9OlsQlz-6qBSXdcWkHj10_lbc9UjU2KA/edit">What do Alumni and Scholars need?</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Feedback.html">Give Feedback</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Submit your question</h2>
+        <form id="questionForm">
+            <div class="mb-3">
+                <label for="question" class="form-label">Your question:</label>
+                <textarea class="form-control" id="question" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h2>Questions and Answers</h2>
+        <div id="questionsAndAnswers">
+            <!-- Server-generated questions and answers will be displayed here. -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    Question by John Doe
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">What is the Weissman Scholarship?</h5>
+                    <p class="card-text">The Weissman Scholarship is a prestigious scholarship program at Babson College that offers financial assistance and enrichment opportunities to exceptional students.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+        function fetchQuestionsAndAnswers() {
+            $.ajax({
+            url: "http://localhost:3000/api/questions",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                const questionsAndAnswers = data.map((qa) => {
+                return `
+                    <div class="card mb-3">
+                    <div class="card-header">
+                        Question by ${qa.name}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">${qa.question}</h5>
+                        <p class="card-text">${qa.answer || "No answer yet"}</p>
+                    </div>
+                    </div>`;
+                }).join("");
+                $("#questionsAndAnswers").html(questionsAndAnswers);
+            },
+            });
+        }
+
+        $("#questionForm").submit(function (event) {
+            event.preventDefault();
+
+            const formData = {
+            name: $("#name").val(),
+            question: $("#question").val(),
+            };
+
+            $.ajax({
+                url: "http://localhost:3000/api/questions",
+                type: "POST",
+                dataType: "json",
+                data: JSON.stringify(formData), // Stringify the formData
+                contentType: "application/json", // Add contentType
+                success: function () {
+                    fetchQuestionsAndAnswers();
+                    $("#questionForm")[0].reset();
+                },
+            });
+
+        });
+
+        fetchQuestionsAndAnswers();
+        });
+
+    </script>
+</body>
+</html>

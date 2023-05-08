@@ -6,11 +6,6 @@
     background-color:beige;
     margin-bottom:100px;
 }
-.navbar:hover, .footeritem:hover {
-    background-color:#AC9362;
-    font-weight: 700;
-
-}
 .navbar {
     list-style-type:none;
     color:black;

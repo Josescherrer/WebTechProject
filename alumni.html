@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="bodyHeader.css">
     <link rel="stylesheet" href="Navbar.css">
     <link rel="icon" href="pictures/Scholars/favicon.ico">
-    <link rel="stylesheet" href="Footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <link rel="icon" href="pictures/Scholars/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/aMFqpDWAA1JLEeA41dYSTeE+a9H5g1K9XrysJj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <style>
         body {
             width: 80%;
@@ -71,12 +76,56 @@
 </head>
 <body>
     <h1>Alumni Page</h1>
-    <ul class="nav">
-        <li class="navbar"><a class="navbar" href="index.html">Home</a></li>
-        <li class="navbar"><a class="navbar" href="scholars.html">Scholars</a></li>
-        <li class="navbar"><a  class="navbar" href="alumni.html">Alumni</a></li>
-        <li class="navbar"><a class="navbar" href="BookRecommendations.html">Book Recommendations</a></li>
-    </ul>
+    <br>
+    <br>
+    <br>
+    <nav class="navbar navbar-light bg-lightgreen fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightGreenNavbar" aria-controls="offcanvasLightGreenNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasLightGreenNavbar" aria-labelledby="offcanvasLightGreenNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLightGreenNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sitemap.html">Sitemap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="BookRecommendations.html">Book Recommendations</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Weissman Scholars and Alumni
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="scholars.html">Scholars page</a>
+                                </li>
+                                <li><a class="dropdown-item" href="alumni.html">Alumni Page</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1rI-ZbHkaJ1AB0kshLw7ydyFSxJkmoGjcxa3Ti6E_YZc/edit">What can Alumni and Scholars Offer?</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1cBQCBGGZNbZ9OlsQlz-6qBSXdcWkHj10_lbc9UjU2KA/edit">What do Alumni and Scholars need?</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Feedback.html">Give Feedback</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
     <table>
         <tr>
             <th>Year Graduated</th><th>Name</th><th>Originally from</th><th>Currently In</th>
@@ -214,18 +263,5 @@
     <br>
     <br>
     <br>
-    <div id="footer">
-        <ul class="footerlist">
-            <li class="footeritem"><a class="footeritem" href="mailto:jscherrerdelllano1@babson.edu">
-            Contact admin of webpage
-            </a></li>
-            <li class="footeritem"><a class="footeritem" href="sitemap.html">
-                Site Map
-            </a></li>
-            <li class="footeritem"><a class="footeritem" href="Feedback.html">
-                Give Feedback 
-            </a></li>
-        </ul>
-    </div>
 </body>
 </html>
