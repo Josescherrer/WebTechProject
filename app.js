@@ -1,8 +1,14 @@
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+  
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
 const bodyParser = require("body-parser");
-const Question = require('./models/question');
+const QuestionAnswer = require('./models/question.js');
 
 const app = express();
 
@@ -19,19 +25,10 @@ db.once("open", function () {
   console.log("Connected to the MongoDB database");
 });
 
-// Define the schema for questions and answers
-const qaSchema = new mongoose.Schema({
-  name: String,
-  question: String,
-  answer: String,
-});
-
-const QuestionAnswer = mongoose.model("QuestionAnswer", qaSchema);
-
 // API endpoint to get all questions and answers
 app.get('/api/questions', async (req, res) => {
     try {
-      const questionsAndAnswers = await Question.find({});
+      const questionsAndAnswers = await QuestionAnswer.find({});
       res.json(questionsAndAnswers);
     } catch (error) {
       console.error(error);
@@ -61,3 +58,30 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+// API endpoint to add an answer to a question
+app.post("/api/questions/:id/answer", async (req, res) => {
+    const { id } = req.params;
+    const { name, answer } = req.body;
+  
+    try {
+      const question = await QuestionAnswer.findById(id);
+      const newAnswer = { name, answer };
+  
+      if (question.answers) {
+        question.answers.push(newAnswer);
+      } else {
+        question.answers = [newAnswer];
+      }
+  
+      await question.save();
+      res.status(200).json({ message: "Answer submitted successfully." });
+    } catch (error) {
+      console.error("Error updating the question with the answer:", error);
+      res.status(500).json({ message: "An error occurred while submitting the answer." });
+    }
+  });
+  
+
+  
